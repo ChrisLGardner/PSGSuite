@@ -237,7 +237,7 @@ $pesterScriptBlock = {
         Path         = $tests
     }
     if ($PSVersionTable.PSVersion.Major -lt 6) {
-        ### $pesterParams['CodeCoverage'] = (Join-Path $outputModVerDir "$($env:BHProjectName).psm1")
+        $pesterParams['CodeCoverage'] = (Join-Path $outputModVerDir "$($env:BHProjectName).psm1")
     }
     if ($global:ExcludeTag) {
         $pesterParams['ExcludeTag'] = $global:ExcludeTag
